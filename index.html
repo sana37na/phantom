@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8">
+	<title>少女標本 - Phantom Rooms -</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="keywords" content="少女標本">
+	<meta name="description" content="閉ざされた部屋で">
+
+	<link rel="stylesheet" href="./css/swiper.min.css">
+	<link media="all" type="text/css" rel="stylesheet" href="./css/style.css" /><!-- cssコンパイル先 -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<div id="app">
+			<div class="header-area">
+				<!-- sp用hamburger menu -->
+				<menu-btn :class="{ header__menu: true, 'is-active': active}" @click.native="naviOpen"></menu-btn>
+			</div><!-- ./header-area -->
+			<!-- sp用メニュー -->
+			<nav id="sp-nav" v-show="navi" style="display: none;">
+				<ul class="header-nav" @click="naviOpen" :class="{'is-active': active}">
+					<ul class="nav-list">
+						<li class="header-nav__item">
+							<a href="#story">Story</a>
+						</li>
+						<li class="header-nav__item">
+							<a href="#outline">Outline</a>
+						</li>
+						<li class="header-nav__item">
+							<a href="#use">How to use</a>
+						</li>
+						<li class="header-nav__item">
+							<a href="#enter">Gate</a>
+						</li>
+						<li class="header-nav__item">
+							<a href="#top">Top</a>
+						</li>
+					</ul>
+				</ul>
+			</nav>
+		</div>
+		<script src="./js/vue.min.js"></script>
+		<script src="./js/menu.js"></script>
+	</header>
+
+	<!-- loading画面 -->
+	<!-- <div id="js-loader" class="loader is-hide">
+			<img src="./img/img_loading.png" alt="ロード中">
+		</div> -->
+
+	<!-- Swiper -->
+	<div id="page">
+		<div class="swiper-container">
+
+			
+			<!-- Add Pagination -->
+			<div class="swiper-pagination page-rute"></div>
+
+			<div class="swiper-wrapper">
+
+				<!--▼TOP-->
+				<div class="swiper-slide">
+					<main id="top">
+						<div class="main-area">
+							<div class="main-txt">
+								<h1>"少女標本"</h1>
+								<span class="annotation">- phantom rooms -</span>
+								<p class="produce">Produced by sana.
+								</p>
+							</div>
+
+						</div>
+					</main>
+				</div>
+
+				<!--▼少女標本とは-->
+				<div class="swiper-slide">
+					<section id="story" class="story">
+						<div class="contents">
+							<div class="column_double">
+								<img src="./img/about.png" alt="おはなし" class="story_img">
+								
+								<div class="topic-area">
+									<h2>"Once upon a time ..."</h2>
+									<p class="contents-txt">
+										届かない想い、封じたこと。じわりと残る、その傷跡。<br>
+										過ぎ去った女の子の時間を、絵画の少女に<br>
+										投影しました。<br>
+									</p>
+									<p>
+										大人になるにつれて<br>
+										たくさんの衣に身を隠して、自分の居場所を<br>
+										掃いて捨てて、の繰り返し。
+									</p>
+									<p class="contents-txt pl_4em">
+										そうして、ぬけがらになった私たち。<br>
+										何もない？ いいえ、感じる？<br>
+										ぬくもりは、いつまで宿る？
+									</p>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!--/story-->
+				</div>
+				<!--/swiper-slide-->
+
+				<!--▼展示概要-->
+				<div class="swiper-slide">
+					<section id="outline">
+						<div class="column_double outline">
+							<div class="contents">
+								<div class="topic-area">
+									<h2>Outline</h2>
+								</div>
+								<p class="contents-txt">
+									ご入場いただく時間によって解き放たれる章が異なります。
+								</p>
+								<ul class="chapter">
+									<li class="chapter__item font-bold border_b">[ Opening Hours at Japan Time ]</li>
+									<li class="chapter__item">+ Chapter 1 : "待っている"</li>
+									<li class="chapter__item">Opening Hour : 6:00 ~ 14:00</li>
+									<li class="chapter__item">Source : "ルーマニアの女 / La Roumaine", Moise Kisling, 1929, Collection of the Hiroshima Museum of art</li>
+								</ul>
+								<ul class="chapter">
+									<li class="chapter__item">+ Chapter 2 : "留まる"</li>
+									<li class="chapter__item">Opening Hour : 14:00 ~ 22:00</li>
+									<li class="chapter__item">
+										Source : "メーダ・プリマヴェージの肖像 / Portrait of Mada Primavesi", Gustav Klimt, 1912,
+										Collection of The Metropolitan Museum of Art
+									</li>
+								</ul>
+								<ul class="chapter">
+									<li class="chapter__item">+ Chapter 2 : "描く"</li>
+									<li class="chapter__item">Opening Hour : 22:00 ~ 6:00</li>
+									<li class="chapter__item">Source : "少女の肖像 / Portrait of a Young Woman. Vaïte（Jeanne）Goupil", Paul Gauguin, 1896, Collection of the Ordrupgaard Museum</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<!--/outline-->
+				</div>
+				<!--/swiper-slide-->
+
+				<!--▼使い方-->
+				<div class="swiper-slide">
+					<section id="use">
+						<div class="contents use">
+							<div class="bg_grid">
+								<div class="border"></div>
+							</div>
+
+							<div class="topic-area">
+								<h2>How to use</h2>
+							</div>
+							<div class="timeline">
+								<div class="column_double step_1">
+									<dl class="">
+										<dt>ご入場口</dt>
+										<dd>
+											本ページ下部の扉から, Mozilla Hubsが立ち上がります。以下設定後, ご入場ください
+											<ol class="flow">
+												<li class="flow__item">Join Roomをクリック</li>
+												<li class="flow__item">Display Nameとアバターを選択※後、Acceptをクリック</li>
+												<li class="flow__item">Audioのテスト後、Enter Roomでご入場いただけます</li>
+											</ol>
+										</dd>
+									</dl>
+									<div class="step_img">
+										<video id="video_1" autoplay loop playinline muted src="./img/howto-1.mp4"></video>
+										<p class="step_caption">
+											推奨環境：PC<br>
+											Google Chrome 最新版, Firefox 最新版
+										</p>
+									</div>
+								</div>
+								<div class="column_double step_2">
+									<div class="step_img">
+										<video id="video_2" autoplay loop playinline muted src="./img/howto-2.mp4"></video>
+										<p class="step_caption">
+											<a href="https://hubs.mozilla.com/docs/hubs-controls.html"
+												target="_blank">その他のデバイスより閲覧される方はこちら</a>
+										</p>
+									</div>
+									<dl class="">
+										<dt>デスクトップモードでご入場の方の操作方法</dt>
+										<dd>
+											視野：マウスドラッグ
+											移動：キーボードの上下左右<br>
+											Q:左へ向く<br>
+											W:前へ進む<br>
+											E:右へ向く<br>
+											S:後ろへ進む<br>
+											A:左へ移動<br>
+											D:右へ移動<br>
+										</dd>
+									</dl>
+								</div>
+								<!-- <div class="column_double step_3">
+									<dl class="">
+										<dt>アバターの着替え方</dt>
+										<dd>
+											部屋の中には着替えられるアバターが存在します。<br>カメラモードを立ち上げると自分の姿を撮影することができます。
+										</dd>
+									</dl>
+									<figure class="step_img">
+										<img src="./img/news1.png" alt="アバター着替え">
+										<figcaption class="step_caption">
+										</figcaption>
+									</figure>
+								</div> -->
+							</div>
+						</div>
+					</section>
+					<!--/use-->
+				</div>
+				<!--/swiper-slide-->
+
+				<!--▼入り口-->
+				<div class="swiper-slide">
+					<section id="enter">
+						<div class="enter">
+							<div class="contents">
+								<h2 class="noto-bold">Gate</h2>
+
+								<div id="time">
+									<div class="open_hour">
+										<div v-if="Hours <= 5" class="gate">
+											<p class="open_hour__chapter">開演中<br>Chapter 3 : "描く"<br>白紙が怖くて、閉じこもったこと。</p>
+											<div>
+												<a href="https://hubs.mozilla.com/VSywRsN/chapter-3" target="_blank" class="gate_link">
+												</a>
+											</div>
+										</div>
+										<div v-else-if="Hours <= 13" class="gate">
+											<p class="open_hour__chapter">開演中<br>Chapter 1 : "待っている"<br>いつまで、心を隠し続けられるか。</p>
+											<div>
+												<a href="https://hubs.mozilla.com/LMwzpzg/chapter-1" target="_blank" class="gate_link">
+												</a>
+											</div>
+										</div>
+										<div v-else-if="Hours <= 21" class="gate">
+											<p class="open_hour__chapter">開演中<br>Chapter 2 : "留まる"<br>演じることは、上手かった。</p>
+											<div>
+												<a href="https://hubs.mozilla.com/Gs8dBTi/chapter-2" target="_blank" class="gate_link">
+												</a>
+											</div>
+										</div>
+										<div v-else class="gate">
+											<p class="open_hour__chapter">開演中<br>Chapter 3 : "描く"<br>白紙が怖くて、閉じこもったこと。</p>
+											<div>
+												<a href="https://hubs.mozilla.com/VSywRsN/chapter-3" target="_blank" class="gate_link">
+												</a>
+											</div>
+										</div>
+
+										<p class="attention">
+											新規ウィンドウが開きます<br>音量にお気をつけください
+										</p>
+
+									</div><!--/open_hour-->
+									<div class="archive">
+										<p class="infomation">
+											現在時刻は<span class="now">{{ posts }}</span>です<br>
+											[ Opening Hours at Japan Time ]<br>
+											6:00 ~ 14:00 Chapter 1<br>
+											14:00 ~ 22:00 Chapter 2<br>
+											22:00 ~ 6:00 Chapter 3
+										</p>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</section>
+					<!--/enter-->
+				</div>
+				<!--/swiper-slide-->
+
+				<footer>
+					<p class="copy">&copy;2020 Sana.</p>
+				</footer>
+
+				<!--▼要素を追加する場合-->
+				<!--<div class="swiper-slide">
+					</div>/swiper-slide-->
+			</div>
+			<!--/swiper-wrapper-->
+
+		</div>
+		<!--/swiper-container-->
+	</div>
+	<!--/#page-->
+
+	<!--▼ページネーション-->
+	<script src="./js/swiper.min.js"></script>
+	<script>
+		// ページコンテンツ
+		const swiper = new Swiper('#page .swiper-container', {
+			direction: 'vertical',
+			slidesPerView: 1,
+			mousewheel: true,
+			pagination: {
+				el: '#page .swiper-pagination',
+				type: 'bullets',
+				clickable: true,
+			},
+			keyboard: {
+				enabled: true,
+				onlyInViewport: false,
+			},
+		});
+	</script>
+
+	<!--▼入場口-->
+	<script>
+		//条件分岐用 日時取得
+		let current_date = new Date()
+		let Hours = current_date.getHours()
+		console.log(Hours);
+
+		//現在時間カウント
+		const time = new Vue({
+			el: '#time',
+			data: {
+				date: '',
+				posts: '',
+			},
+			mounted: function () {
+				let timerID = setInterval(this.updateTime, 1000);
+			},
+			methods: {
+				updateTime: function () {
+					let now = new Date()
+					this.posts = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds()
+
+					// debug
+					// console.log(current_date)
+				}
+				//参考 https://www.i-ryo.com/entry/2018/08/22/222405
+			}
+		});
+	</script>
+	<!--▼ローディングアニメーション-->
+	<!-- <script>
+			const loader = document.getElementById('js-loader');
+			window.addEventListener('load', () => {
+			const ms = 500;
+			loader.style.transition = 'opacity ' + ms + 'ms';
+			
+			/* ロード画面の非表示を解除 */
+			const loaderOpacity = function(){
+				loader.style.opacity = 0;
+			}
+			const loaderDisplay = function(){
+				loader.style.opacity = 0;
+				loader.style.display = 'none';
+			}
+			// デモ用
+			setTimeout(loaderOpacity, 1500);
+			setTimeout(loaderDisplay, 1500 + ms);
+			});
+		</script> -->
+</body>
+
+</html>
