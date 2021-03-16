@@ -59,6 +59,11 @@ p {
   line-height: 1.4em;
 }
 
+.link_text {
+  color: #1a1a1a;
+  border-bottom: 1px solid;
+}
+
 img {
   height: auto;
   width: 100%;
@@ -94,8 +99,12 @@ section {
 
 @media (max-width: 576px) {
   .contents {
-    width: 85%;
+    width: 80%;
   }
+}
+
+video {
+  max-height: 250px;
 }
 
 h1 {
@@ -338,6 +347,11 @@ header {
   background-position: center;
 }
 
+#page {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
 #page .page-rute {
   position: fixed;
   left: 15px;
@@ -570,11 +584,19 @@ main .main-area .produce {
   list-style: none;
   max-width: 400px;
   margin: 0 0 2em auto;
-  font-size: 0.8em;
+  font-size: 0.9rem;
 }
 
 .chapter:last-child {
   margin-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+  .chapter {
+    line-height: 2em;
+    width: 90%;
+    max-width: 100%;
+  }
 }
 
 .chapter .border_b {
@@ -586,14 +608,12 @@ main .main-area .produce {
 }
 
 .use {
-  padding-top: 0;
   position: relative;
 }
 
 @media (max-width: 1024px) {
   .use {
     overflow: hidden;
-    padding-top: 10%;
   }
 }
 
@@ -606,6 +626,7 @@ main .main-area .produce {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  z-index: -1;
 }
 
 .use .bg_grid .border::after {
@@ -620,20 +641,14 @@ main .main-area .produce {
   position: absolute;
 }
 
-@media (max-width: 830px) and (orientation: landscape) {
-  .use .bg_grid .border::after {
-    width: 100%;
-  }
-}
-
-@media (max-width: 576px) {
+@media (max-width: 1024px) {
   .use .bg_grid .border::after {
     display: none;
   }
 }
 
 .use .flow {
-  padding: 3em;
+  padding: 1em 0 1.5em 1.5em;
 }
 
 .use .flow__item {
@@ -642,39 +657,67 @@ main .main-area .produce {
 
 .use .timeline {
   overflow-y: hidden;
-  font-size: 0.8em;
+  font-size: 0.8rem;
   max-height: 700px;
 }
 
-.use .timeline dl dt {
-  font-weight: 600;
-  font-size: 1.4em;
-  padding-bottom: 1.5em;
+.use .timeline__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-/* .use .step_img {
-  visibility: hidden;
-} */
-video {
-  max-width: 300px;
-  height: 500px;
+@media (max-width: 768px) {
+  .use .timeline__item {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
+.use .timeline__text {
+  width: 48%;
+}
+
+@media (max-width: 768px) {
+  .use .timeline__text {
+    width: 100%;
+  }
+}
+
+.use .timeline__text dt {
+  font-weight: 600;
+  font-size: 2em;
 }
 
 .use .step_caption {
-  font-size: 0.8em;
-  line-height: 1.5em;
+  font-size: 0.5rem;
+  line-height: 3em;
+}
+
+.use .step_2 {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 5%;
 }
 
 @media (max-width: 830px) and (orientation: landscape) {
-  .use .step_2, .use .step_3 {
+  .use .step_2 {
     display: none;
   }
 }
 
 @media (max-width: 576px) {
-  .use .step_2, .use .step_3 {
+  .use .step_2 {
     display: none;
   }
+}
+
+.use .step_img {
+  margin: 0 5em;
 }
 
 .enter {
@@ -713,8 +756,8 @@ video {
   background-repeat: no-repeat;
   -webkit-transform: rotateZ(55deg);
           transform: rotateZ(55deg);
-  top: -15%;
-  right: -40%;
+  top: 5%;
+  right: -50%;
   -webkit-transform-origin: right;
           transform-origin: right;
 }
@@ -723,7 +766,7 @@ video {
   .enter .gate::after {
     width: 60px;
     height: 60px;
-    right: -5%;
+    right: -25%;
   }
 }
 
