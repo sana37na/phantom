@@ -58,7 +58,6 @@
 	<!-- Swiper -->
 	<div id="page">
 		<div class="swiper-container">
-
 			
 			<!-- Add Pagination -->
 			<div class="swiper-pagination page-rute"></div>
@@ -67,7 +66,7 @@
 
 				<!--▼TOP-->
 				<div class="swiper-slide">
-					<main id="top">
+					<main id="top" data-hash="top">
 						<div class="main-area">
 							<div class="main-txt">
 								<h1>"少女標本"</h1>
@@ -82,7 +81,7 @@
 
 				<!--▼少女標本とは-->
 				<div class="swiper-slide">
-					<section id="story" class="story">
+					<section id="story" class="story" data-hash="story">
 						<div class="contents">
 							<div class="column_double">
 								<img src="./img/about.png" alt="おはなし" class="story_img">
@@ -114,7 +113,7 @@
 
 				<!--▼展示概要-->
 				<div class="swiper-slide">
-					<section id="outline">
+					<section id="outline" data-hash="outline">
 						<div class="column_double outline">
 							<div class="contents">
 								<div class="topic-area">
@@ -126,20 +125,20 @@
 								<ul class="chapter">
 									<li class="chapter__item font-bold border_b">[ Opening Hours at Japan Time ]</li>
 									<li class="chapter__item">+ Chapter 1 : "待っている"</li>
-									<li class="chapter__item">Opening Hour : 6:00 ~ 14:00</li>
+									<li class="chapter__item">Opening Hour : 6:00 - 14:00</li>
 									<li class="chapter__item">Source : "ルーマニアの女 / La Roumaine", Moise Kisling, 1929, Collection of the Hiroshima Museum of art</li>
 								</ul>
 								<ul class="chapter">
 									<li class="chapter__item">+ Chapter 2 : "留まる"</li>
-									<li class="chapter__item">Opening Hour : 14:00 ~ 22:00</li>
+									<li class="chapter__item">Opening Hour : 14:00 - 22:00</li>
 									<li class="chapter__item">
 										Source : "メーダ・プリマヴェージの肖像 / Portrait of Mada Primavesi", Gustav Klimt, 1912,
 										Collection of The Metropolitan Museum of Art
 									</li>
 								</ul>
 								<ul class="chapter">
-									<li class="chapter__item">+ Chapter 2 : "描く"</li>
-									<li class="chapter__item">Opening Hour : 22:00 ~ 6:00</li>
+									<li class="chapter__item">+ Chapter 3 : "描く"</li>
+									<li class="chapter__item">Opening Hour : 22:00 - 6:00</li>
 									<li class="chapter__item">Source : "少女の肖像 / Portrait of a Young Woman. Vaïte（Jeanne）Goupil", Paul Gauguin, 1896, Collection of the Ordrupgaard Museum</li>
 								</ul>
 							</div>
@@ -151,7 +150,7 @@
 
 				<!--▼使い方-->
 				<div class="swiper-slide">
-					<section id="use">
+					<section id="use" data-hash="use">
 						<div class="contents use">
 							<div class="bg_grid">
 								<div class="border"></div>
@@ -161,61 +160,44 @@
 								<h2>How to use</h2>
 							</div>
 							<div class="timeline">
-								<div class="column_double step_1">
-									<dl class="">
-										<dt>ご入場口</dt>
+								<div class="timeline__item step_1">
+									<dl class="timeline__text">
+										<dt>ご入場方法</dt>
 										<dd>
 											本ページ下部の扉から, Mozilla Hubsが立ち上がります。以下設定後, ご入場ください
 											<ol class="flow">
 												<li class="flow__item">Join Roomをクリック</li>
-												<li class="flow__item">Display Nameとアバターを選択※後、Acceptをクリック</li>
+												<li class="flow__item">Display Nameとアバターを選択後、Acceptをクリック</li>
 												<li class="flow__item">Audioのテスト後、Enter Roomでご入場いただけます</li>
 											</ol>
+											<span class="attention">
+											※閲覧環境により見え方が異なります。Mobileでは正常にご覧いただけません。</span>
 										</dd>
 									</dl>
 									<div class="step_img">
 										<video id="video_1" autoplay loop playinline muted src="./img/howto-1.mp4"></video>
 										<p class="step_caption">
 											推奨環境：PC<br>
-											Google Chrome 最新版, Firefox 最新版
+											ブラウザ：Google Chrome 最新版 / Firefox 最新版
 										</p>
 									</div>
 								</div>
-								<div class="column_double step_2">
+								<div class="timeline__item step_2">
 									<div class="step_img">
 										<video id="video_2" autoplay loop playinline muted src="./img/howto-2.mp4"></video>
-										<p class="step_caption">
-											<a href="https://hubs.mozilla.com/docs/hubs-controls.html"
-												target="_blank">その他のデバイスより閲覧される方はこちら</a>
-										</p>
 									</div>
-									<dl class="">
+									<dl class="timeline__text">
 										<dt>デスクトップモードでご入場の方の操作方法</dt>
-										<dd>
-											視野：マウスドラッグ
-											移動：キーボードの上下左右<br>
-											Q:左へ向く<br>
-											W:前へ進む<br>
-											E:右へ向く<br>
-											S:後ろへ進む<br>
-											A:左へ移動<br>
-											D:右へ移動<br>
+										<dd class="flow">
+											キーボード ←↑↓→：移動<br>
+											Qキー：左へ向く<br>
+											Eキー：右へ向く<br>
+											マウスドラッグ：視点変更<br>
 										</dd>
+											
+										<a href="https://hubs.mozilla.com/docs/hubs-controls.html" target="_blank" class="step_caption link_text">その他のデバイスより閲覧される方はこちら</a>
 									</dl>
 								</div>
-								<!-- <div class="column_double step_3">
-									<dl class="">
-										<dt>アバターの着替え方</dt>
-										<dd>
-											部屋の中には着替えられるアバターが存在します。<br>カメラモードを立ち上げると自分の姿を撮影することができます。
-										</dd>
-									</dl>
-									<figure class="step_img">
-										<img src="./img/news1.png" alt="アバター着替え">
-										<figcaption class="step_caption">
-										</figcaption>
-									</figure>
-								</div> -->
 							</div>
 						</div>
 					</section>
@@ -225,7 +207,7 @@
 
 				<!--▼入り口-->
 				<div class="swiper-slide">
-					<section id="enter">
+					<section id="enter" data-hash="enter">
 						<div class="enter">
 							<div class="contents">
 								<h2 class="noto-bold">Gate</h2>
@@ -270,9 +252,9 @@
 										<p class="infomation">
 											現在時刻は<span class="now">{{ posts }}</span>です<br>
 											[ Opening Hours at Japan Time ]<br>
-											6:00 ~ 14:00 Chapter 1<br>
-											14:00 ~ 22:00 Chapter 2<br>
-											22:00 ~ 6:00 Chapter 3
+											6:00 - 14:00 Chapter 1<br>
+											14:00 - 22:00 Chapter 2<br>
+											22:00 - 6:00 Chapter 3
 										</p>
 									</div>
 								</div>
@@ -285,7 +267,7 @@
 				<!--/swiper-slide-->
 
 				<footer>
-					<p class="copy">&copy;2020 Sana.</p>
+					<p class="copy">&copy;2021 Sana.</p>
 				</footer>
 
 				<!--▼要素を追加する場合-->
@@ -307,6 +289,7 @@
 			direction: 'vertical',
 			slidesPerView: 1,
 			mousewheel: true,
+			// hashNavigation: true,
 			pagination: {
 				el: '#page .swiper-pagination',
 				type: 'bullets',
@@ -315,6 +298,9 @@
 			keyboard: {
 				enabled: true,
 				onlyInViewport: false,
+			},
+			hashNavigation: {
+				replaceState: true,
 			},
 		});
 	</script>
