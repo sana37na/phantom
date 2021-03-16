@@ -1,0 +1,179 @@
+@charset 'utf-8';
+
+//--------------------------
+// 変数
+//--------------------------
+$main-color: #BA1515;
+$text-color: #1a1a1a;
+$link-color: #7b7b7b;
+$max-width: 1360px;
+
+//--------------------------
+// レスポンシブ定義
+//--------------------------
+
+$xs: 320px; // no use
+$sm: 576px;
+$md: 768px;
+$mm: 830px;
+$lg: 1024px;
+
+@mixin xs {
+    @media (max-width: ($xs)) {
+        @content;
+    }
+}
+@mixin sm {
+    @media (max-width: ($sm)) {
+        @content;
+    }
+}
+@mixin md {
+    @media (max-width: ($md)) {
+        @content;
+    }
+}
+@mixin mm {
+    @media (max-width: ($mm)) and (orientation: landscape) {
+        @content;
+    }
+}
+@mixin lg {
+    @media (max-width: ($lg)) {
+        @content;
+    }
+}
+
+//--------------------------
+// リセットcss
+//--------------------------
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    background: transparent;
+    border: 0;
+    font-size: 100%;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display: block;
+}
+
+a {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+//--------------------------
+// all
+//--------------------------
+html,body {
+    position: relative;
+    height: 100%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: url(./../img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $text-color;
+    font-family: 'Shippori Mincho B1', '游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic','Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans','ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'Osaka', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    font-size: 14px;
+    line-height: 1.8em;
+    margin: 0 auto;
+    min-width: 280px;
+}
+
+p {
+    font-size: 0.9rem;
+    line-height: 1.4em;
+}
+
+.link_text {
+    color: $text-color;
+    border-bottom: 1px solid;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+section {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.contents {
+    margin: 0 auto;
+    // padding-top: 10%;
+    width: 85%;
+    @include mm {
+        padding-top: 2em;
+    }
+    @include sm {
+        width: 80%;
+    }
+}
+
+video {
+    max-height: 250px;
+    // @include md {
+    //     display: none;
+    // }
+}
+
+//--------------------------
+// font 汎用
+//--------------------------
+h1 {
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 1em;
+    text-align: center;
+    @include lg {
+        font-size: 4rem;
+    }
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 4rem;
+    line-height: 2em;
+    @include lg {
+        font-size: 3rem;
+    }
+}
+
+.attention {
+    font-size: 8px;
+    line-height: 1.8em;
+}
+
+.font-bold {
+    font-weight: 600;
+}

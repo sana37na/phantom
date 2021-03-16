@@ -1,0 +1,115 @@
+@charset 'utf-8';
+
+//--------------------------
+// Header
+//--------------------------
+header {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+}
+.header-area {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+//--------------------------
+// sp用メニュー
+//--------------------------
+#sp-nav {
+    height: 100vh;
+    z-index: 998;
+    background-color:#fff;
+    animation-duration: 0.8s;
+    animation-name: slideIn;
+    margin: 0 0 0 auto;
+    max-width: 500px;
+    overflow-y: scroll;
+    .header-nav {
+        height: 100%;
+        list-style: none;
+        position: relative;
+        &__item {
+            padding: 9% 0 0;
+            list-style: none;
+            a {
+                color: $link-color;
+                font-weight: 600;
+                &:hover {
+                    color: $main-color;
+                }
+            }
+        }
+        .nav-list {
+            text-align: left;
+            padding: 15%;
+        }
+    }
+}
+
+/* ハンバーガーメニュー */
+.header__menu {
+    display: block;
+    height: 28px;
+    position: fixed;
+    right: 0;
+    top: 20px;
+    width: 20px;
+    z-index: 999;
+
+    &.is-active {
+        box-shadow: none;
+        span {
+            transition: .6s;
+            &:first-child {
+                top: 50%;
+                transform: rotate(45deg);
+                background: $main-color;
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:last-child {
+                top: 50%;
+                transform: rotate(-45deg);
+                background: $text-color;
+            }
+        }
+    }
+    &__line {
+        cursor: pointer;
+        height: 28px;
+        margin: 0;
+        position: relative;
+        width: 32px;
+        span {
+            background: $text-color;
+            display: block;
+            height: 3px;
+            position: absolute;
+            transition: .6s;
+            width: 3px;
+            &:first-child {
+                top: 0;
+            }
+            &:nth-child(2) {
+                top: 13px;
+            }
+            &:last-child {
+                bottom: 0;
+            }
+        }
+    }
+}
