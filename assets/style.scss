@@ -287,13 +287,13 @@ main {
         max-height: 700px;
         &__item {
             display: flex;
-            @include md {
+            @include sm {
                 flex-wrap: wrap;
             }
         }
         &__text {
             width: 48%;
-            @include md {
+            @include sm {
                 width: 100%;
             }
             dt {
