@@ -65,23 +65,21 @@
 			<div class="swiper-wrapper">
 
 				<!--▼TOP-->
-				<div class="swiper-slide">
-					<main id="top" data-hash="top">
+				<div class="swiper-slide" data-hash="top">
+					<main id="top">
 						<div class="main-area">
 							<div class="main-txt">
 								<h1>"少女標本"</h1>
 								<span class="annotation">- phantom rooms -</span>
-								<p class="produce">Produced by sana.
-								</p>
+								<p class="produce">Produced by sana.</p>
 							</div>
-
 						</div>
 					</main>
 				</div>
 
 				<!--▼少女標本とは-->
-				<div class="swiper-slide">
-					<section id="story" class="story" data-hash="story">
+				<div class="swiper-slide" data-hash="story">
+					<section id="story" class="story">
 						<div class="contents">
 							<div class="column_double">
 								<img src="./img/about.png" alt="おはなし" class="story_img">
@@ -112,8 +110,8 @@
 				<!--/swiper-slide-->
 
 				<!--▼展示概要-->
-				<div class="swiper-slide">
-					<section id="outline" data-hash="outline">
+				<div class="swiper-slide" data-hash="outline">
+					<section id="outline">
 						<div class="column_double outline">
 							<div class="contents">
 								<div class="topic-area">
@@ -149,8 +147,8 @@
 				<!--/swiper-slide-->
 
 				<!--▼使い方-->
-				<div class="swiper-slide">
-					<section id="use" data-hash="use">
+				<div class="swiper-slide" data-hash="use">
+					<section id="use">
 						<div class="contents use">
 							<div class="bg_grid">
 								<div class="border"></div>
@@ -206,8 +204,8 @@
 				<!--/swiper-slide-->
 
 				<!--▼入り口-->
-				<div class="swiper-slide">
-					<section id="enter" data-hash="enter">
+				<div class="swiper-slide" data-hash="enter">
+					<section id="enter">
 						<div class="enter">
 							<div class="contents">
 								<h2 class="noto-bold">Gate</h2>
@@ -243,9 +241,7 @@
 											</div>
 										</div>
 
-										<p class="attention">
-											新規ウィンドウが開きます<br>音量にお気をつけください
-										</p>
+										<p class="attention">新規ウィンドウが開きます<br>音量にお気をつけください</p>
 
 									</div><!--/open_hour-->
 									<div class="archive">
@@ -259,7 +255,6 @@
 									</div>
 								</div>
 							</div>
-
 						</div>
 					</section>
 					<!--/enter-->
@@ -289,7 +284,6 @@
 			direction: 'vertical',
 			slidesPerView: 1,
 			mousewheel: true,
-			// hashNavigation: true,
 			pagination: {
 				el: '#page .swiper-pagination',
 				type: 'bullets',
@@ -330,7 +324,6 @@
 					// debug
 					// console.log(current_date)
 				}
-				//参考 https://www.i-ryo.com/entry/2018/08/22/222405
 			}
 		});
 	</script>
