@@ -329,6 +329,9 @@ main {
     }
     .step_img {
         margin: 0 5em;
+        @include sm {
+            margin: 0;
+        }
     }
 }
 
