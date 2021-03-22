@@ -108,11 +108,11 @@ main {
     background-repeat: no-repeat;
     background-size: 450px;
     transition: all 2s;
-    @include mm {
-        background-size: 150px;
+    @include lg {
+        background-size: 260px;
     }
     @include md {
-        background-position: bottom 15% right 40px;
+        background-position: bottom 20% right 40px;
         background-size: 200px;    
     }
     .main-area {
@@ -130,6 +130,9 @@ main {
             padding-top: 30%;
             @include mm {
                 padding-top: 2em;
+            }
+            @include md {
+                padding-top: 15%;
             }
         }
     }
@@ -171,7 +174,6 @@ main {
 // Story
 .story {
     .contents {
-        // padding-top: 5%;
         .topic-area {
             text-align: right;
             @include lg {
@@ -277,6 +279,8 @@ main {
     }
     .flow {
         padding: 1em 0 1.5em 1.5em;
+        font-size: 0.9rem;
+        line-height: 2em;
         &__item {
             padding-left: 0.5em;
         }
@@ -309,10 +313,10 @@ main {
             // }
         }
     }
-    .step_caption {
-        font-size: 0.5rem;
-        line-height: 3em;
-    }
+    // .step_caption {
+    //     font-size: 0.9rem;
+    //     line-height: 2em;
+    // }
     .step_2 {
         justify-content: flex-end;
         margin-top: 5%;
@@ -325,8 +329,6 @@ main {
     }
     .step_img {
         margin: 0 5em;
-        // text-align: center;
-        // width: 100%;
     }
 }
 
@@ -345,6 +347,9 @@ main {
     }
     .infomation {
         line-height: 2em;
+        @include lg {
+            font-size: 0.7rem;
+        }
     }
     .gate {
         position: relative;

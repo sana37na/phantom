@@ -130,10 +130,9 @@ section {
 
 .contents {
     margin: 0 auto;
-    // padding-top: 10%;
     width: 85%;
-    @include mm {
-        padding-top: 2em;
+    @include lg {
+        padding: 0;
     }
     @include sm {
         width: 80%;
