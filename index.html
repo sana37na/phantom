@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="keywords" content="少女標本">
-	<meta name="description" content="閉ざされた部屋で">
+	<meta name="description" content="閉ざされた部屋から 向こう側を歩く すべての少女たちへ">
 
 	<link rel="icon" href="./favicon.ico" type="image/vnd.microsoft.icon">
 	<link rel="stylesheet" href="./css/swiper.min.css">
@@ -17,38 +17,6 @@
 </head>
 
 <body>
-	<header>
-		<div id="app">
-			<div class="header-area">
-				<!-- sp用hamburger menu -->
-				<menu-btn :class="{ header__menu: true, 'is-active': active}" @click.native="naviOpen"></menu-btn>
-			</div><!-- ./header-area -->
-			<!-- sp用メニュー -->
-			<nav id="sp-nav" v-show="navi" style="display: none;">
-				<ul class="header-nav" @click="naviOpen" :class="{'is-active': active}">
-					<ul class="nav-list">
-						<li class="header-nav__item">
-							<a href="#story">Story</a>
-						</li>
-						<li class="header-nav__item">
-							<a href="#outline">Outline</a>
-						</li>
-						<li class="header-nav__item">
-							<a href="#use">How to use</a>
-						</li>
-						<li class="header-nav__item">
-							<a href="#enter">Gate</a>
-						</li>
-						<li class="header-nav__item">
-							<a href="#top">Top</a>
-						</li>
-					</ul>
-				</ul>
-			</nav>
-		</div>
-		<script src="./js/vue.min.js"></script>
-		<script src="./js/menu.js"></script>
-	</header>
 
 	<!-- loading画面 -->
 	<!-- <div id="js-loader" class="loader is-hide">
@@ -59,6 +27,39 @@
 	<div id="page">
 		<div class="swiper-container">
 			
+			<header>
+				<div id="app">
+					<div class="header-area">
+						<!-- sp用hamburger menu -->
+						<menu-btn :class="{ header__menu: true, 'is-active': active}" @click.native="naviOpen"></menu-btn>
+					</div><!-- ./header-area -->
+					<!-- sp用メニュー -->
+					<nav id="sp-nav" v-show="navi" style="display: none;">
+						<ul class="header-nav" @click="naviOpen" :class="{'is-active': active}">
+							<ul class="nav-list">
+								<li class="header-nav__item">
+									<a href="#story" aria-label="Go to slide 2">Story</a>
+								</li>
+								<li class="header-nav__item">
+									<a href="#outline" aria-label="Go to slide 3">Outline</a>
+								</li>
+								<li class="header-nav__item">
+									<a href="#use" aria-label="Go to slide 4">How to use</a>
+								</li>
+								<li class="header-nav__item">
+									<a href="#enter" aria-label="Go to slide 5">Gate</a>
+								</li>
+								<li class="header-nav__item">
+									<a href="#top" aria-label="Go to slide 1">Top</a>
+								</li>
+							</ul>
+						</ul>
+					</nav>
+				</div>
+				<script src="./js/vue.min.js"></script>
+				<script src="./js/menu.js"></script>
+			</header>
+
 			<!-- Add Pagination -->
 			<div class="swiper-pagination page-rute"></div>
 
@@ -168,8 +169,7 @@
 												<li class="flow__item">Display Nameとアバターを選択後、Acceptをクリック</li>
 												<li class="flow__item">Audioのテスト後、Enter Roomでご入場いただけます</li>
 											</ol>
-											<span class="attention">
-											※閲覧環境により見え方が異なります。Mobileでは正常にご覧いただけません。</span>
+											<span class="attention">※閲覧環境により見え方が異なります。</span>
 										</dd>
 									</dl>
 									<div class="step_img">
@@ -284,6 +284,7 @@
 			direction: 'vertical',
 			slidesPerView: 1,
 			mousewheel: true,
+			calculateHeight: true,
 			pagination: {
 				el: '#page .swiper-pagination',
 				type: 'bullets',
