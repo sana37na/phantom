@@ -91,9 +91,9 @@ section {
   width: 85%;
 }
 
-@media (max-width: 830px) and (orientation: landscape) {
+@media (max-width: 1024px) {
   .contents {
-    padding-top: 2em;
+    padding: 0;
   }
 }
 
@@ -396,15 +396,15 @@ main {
   transition: all 2s;
 }
 
-@media (max-width: 830px) and (orientation: landscape) {
+@media (max-width: 1024px) {
   main {
-    background-size: 150px;
+    background-size: 260px;
   }
 }
 
 @media (max-width: 768px) {
   main {
-    background-position: bottom 15% right 40px;
+    background-position: bottom 20% right 40px;
     background-size: 200px;
   }
 }
@@ -439,6 +439,12 @@ main .main-area .produce {
 @media (max-width: 830px) and (orientation: landscape) {
   main .main-area .produce {
     padding-top: 2em;
+  }
+}
+
+@media (max-width: 768px) {
+  main .main-area .produce {
+    padding-top: 15%;
   }
 }
 
@@ -649,6 +655,8 @@ main .main-area .produce {
 
 .use .flow {
   padding: 1em 0 1.5em 1.5em;
+  font-size: 0.9rem;
+  line-height: 2em;
 }
 
 .use .flow__item {
@@ -668,7 +676,7 @@ main .main-area .produce {
   display: flex;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .use .timeline__item {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -680,7 +688,7 @@ main .main-area .produce {
   width: 48%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .use .timeline__text {
     width: 100%;
   }
@@ -689,11 +697,6 @@ main .main-area .produce {
 .use .timeline__text dt {
   font-weight: 600;
   font-size: 2em;
-}
-
-.use .step_caption {
-  font-size: 0.5rem;
-  line-height: 3em;
 }
 
 .use .step_2 {
@@ -739,6 +742,12 @@ main .main-area .produce {
 
 .enter .infomation {
   line-height: 2em;
+}
+
+@media (max-width: 1024px) {
+  .enter .infomation {
+    font-size: 0.7rem;
+  }
 }
 
 .enter .gate {
