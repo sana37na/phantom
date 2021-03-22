@@ -723,6 +723,12 @@ main .main-area .produce {
   margin: 0 5em;
 }
 
+@media (max-width: 576px) {
+  .use .step_img {
+    margin: 0;
+  }
+}
+
 .enter {
   text-align: center;
 }
