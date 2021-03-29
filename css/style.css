@@ -106,6 +106,12 @@ section {
 video {
   max-height: 250px;
 }
+@media (max-width: 768px) {
+  video {
+    overflow: hidden;
+    width: 100%;
+  }
+}
 
 h1 {
   font-size: 6rem;
