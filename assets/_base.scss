@@ -141,9 +141,10 @@ section {
 
 video {
     max-height: 250px;
-    // @include md {
-    //     display: none;
-    // }
+    @include md {
+        overflow: hidden;
+        width: 100%;
+    }
 }
 
 //--------------------------
