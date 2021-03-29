@@ -600,8 +600,9 @@ main .main-area .produce {
 @media (max-width: 1024px) {
   .chapter {
     line-height: 2em;
-    width: 90%;
+    width: 95%;
     max-width: 100%;
+    margin-bottom: 1em;
   }
 }
 
